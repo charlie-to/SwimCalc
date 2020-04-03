@@ -1,4 +1,4 @@
-var express = require('express');
+import express from 'express';
 var app = express();
 const pug = require('pug');
 const bodyParser = require("body-parser");
