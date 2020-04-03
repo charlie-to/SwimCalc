@@ -1,0 +1,8 @@
+{
+  "name": "swimcalc",
+  "description": "calculator for swimming",
+  "repository": "https://github.com/CharlieShatihoko/SwimCalc",
+  "logo": "",
+  "keywords": ["swim"],
+  "image":"heroku/nodejs"
+}

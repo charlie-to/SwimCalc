@@ -1,11 +1,10 @@
-const http = require('http');
 const express = require('express');
 var app = express();
 const pug =require("pug");
 var bodyParser = require("body-parser");
 const calc = require('./lib/calc');
 const mkteet = require('./lib/mktweet');
-const PORT = process.env.PORT ||3000;
+const PORT = process.env.PORT ||8000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('./public'));
@@ -23,6 +22,7 @@ var timeData = {
 
 //httpリクエスト受け取り、pugを渡す
 app.get('/',(req,res)=>{
+  console.info('get method');
   res.end(pug.renderFile('./views/form.pug'));
   console.info('pug ok');
 });
@@ -57,6 +57,6 @@ function handleRedirectPosts(req, res) {
 
 //サーバー起動
 app.listen(PORT, () => {
-  console.log('> unubo-poc - 0.0.1-alpha');
+  console.log('> swim calc start');
   console.log(`> Ready on http://localhost:${PORT}...`);
 });
