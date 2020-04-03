@@ -1,7 +1,7 @@
 import express from 'express';
 var app = express();
-const pug = require('pug');
-const bodyParser = require("body-parser");
+import pug from 'pug';
+import bodyParser from 'body-parser';
 const calc = require('./lib/calc');
 const mkteet = require('./lib/mktweet');
 const PORT = process.env.PORT ||3000;
