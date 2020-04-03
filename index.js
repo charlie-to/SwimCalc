@@ -1,15 +1,16 @@
-import express from 'express';
+const http = require('http');
+const express = require('express');
 var app = express();
-import pug from 'pug';
-import bodyParser from 'body-parser';
+const pug =require("pug");
+var bodyParser = require("body-parser");
 const calc = require('./lib/calc');
 const mkteet = require('./lib/mktweet');
 const PORT = process.env.PORT ||3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('./public'));
-var router = express.Router();
-app.use(bodyParser.json());
+var router = express.Router;
+app.use(bodyParser.json);
 
 var timeData = {
   timeMin: [],
