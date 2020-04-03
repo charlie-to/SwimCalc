@@ -55,8 +55,7 @@ function handleRedirectPosts(req, res) {
 };
 
 //サーバー起動
-var server = app.listen(PORT, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log('Example app listening', host, port);
+app.listen(PORT, () => {
+  console.log('> unubo-poc - 0.0.1-alpha');
+  console.log(`> Ready on http://localhost:${PORT}...`);
 });
