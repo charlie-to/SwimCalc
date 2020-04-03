@@ -4,6 +4,7 @@ const pug = require('pug');
 const bodyParser = require("body-parser");
 const calc = require('./lib/calc');
 const mkteet = require('./lib/mktweet');
+const PORT = process.env.PORT ||3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('./public'));
@@ -54,8 +55,8 @@ function handleRedirectPosts(req, res) {
 };
 
 //サーバー起動
-var server = app.listen(3000, function () {
+var server = app.listen(PORT, function () {
   var host = server.address().address;
   var port = server.address().port;
-  console.log('Example app listening at http://%s:%s', host, port);
+  console.log('Example app listening', host, port);
 });
